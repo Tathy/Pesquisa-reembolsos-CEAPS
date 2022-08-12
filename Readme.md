@@ -20,8 +20,32 @@ Os reembolsos com valores negativos foram tratados com módulo.
 
 Após esses tratamentos, os tipos das colunas puderam ser convertidos facilmente.
 
-### Problemas já encontrados:
+### Problemas encontrados
 
 * Há diversas entradas em que os valores de reembolso são muito baixos (abaixo de R$ 1,00) e totalmente inconsistentes com o tipo de despesa e detalhamento (por exemplo: uma passagem aérea com valor de R$ 0,01).
 
 Valores assim distorcem as médias dos gastos e podem mascarar possíveis valores exorbitantes que podem ser encontrados.
+
+# Análises sobre estatísticas de cada tipo de despesa e os senadores envolvidos
+
+Até o momento, as análises estão sendo feitas separadas por tipo de despesa, totalizando sete:
+
+- Locomoção, hospedagem, alimentação, combustíveis e lubrificantes
+- Passagens aéreas, aquáticas e terrestres nacionais
+- Aluguel de imóveis para escritório político, compreendendo despesas concernentes a eles
+- Aquisição de material de consumo para uso no escritório político, inclusive aquisição ou locação de software, despesas postais, aquisição de publicações, locação de móveis e de equipamentos
+- Divulgação da atividade parlamentar
+- Contratação de consultorias, assessorias, pesquisas, trabalhos técnicos e outros serviços de apoio ao exercício do mandato parlamentar
+- Serviços de Segurança Privada
+
+Cada tipo está sendo analisado da seguinte forma:
+- Reembolsos com valores altos (quartis 95% e 99%)
+- Reembolsos com valores baixos (quartis 5% e 1%)
+- Senadores com maiores somatórios em requisições de reembolsos com valores baixos e os fornecedores que mais receberam
+- Senadores com maiores somatórios em requisições de reembolsos com valores altos e os fornecedores que mais receberam
+
+### Problemas encontrados
+
+* Haviam passagens aéreas que supostamente foram mais baratas que passagens não aéreas. Como eram poucas (22), optei por remover estas entradas do dataset. Entretanto, considerando que o valor reembolsado aos senadores seja exatamente o que consta no CEAPS, o ideal seria identificar os valores reais destas passagens e descobrir a causa do equívoco.
+
+* Despesas com valores subnotificados podem não ser reais e, somadas, causarem tanto prejuízo quanto uma quantidade menor de entradas superfaturadas, além de atrapalhar a detecção das mesmas de forma automática.
