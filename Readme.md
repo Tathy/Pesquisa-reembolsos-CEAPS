@@ -83,3 +83,5 @@ Os gastos mais baixos foram feitos por senadores que adquiriram itens baratos de
 ### Problemas encontrados
 
 * Despesas com valores subnotificados podem não ser reais e, somadas, causarem tanto prejuízo quanto uma quantidade menor de entradas superfaturadas, além de atrapalhar a detecção das mesmas de forma automática.
+
+🌱
