@@ -50,7 +50,7 @@ Houveram muitos gastos de valores "baixos", e alguns gastos com valores muito ac
 
 ### Problemas encontrados
 
-As requisições de reembolso com valores baixos (até R$ 58,88, quartil 5%) não apresentaram somas muito exorbitantes. Entretanto, dentre os fornecedores especificados nestas requisições haviam duas companhias aéreas. Em uma delas o detalhamento era relacionado a despesa com frete de documentos, mas na outra não havia nenhuma especificação.
+* As requisições de reembolso com valores baixos (até R$ 58,88, quartil 5%) não apresentaram somas muito exorbitantes. Entretanto, dentre os fornecedores especificados nestas requisições haviam duas companhias aéreas. Em uma delas o detalhamento era relacionado a despesa com frete de documentos, mas na outra não havia nenhuma especificação.
 
 ## Passagens aéreas, aquáticas e terrestres nacionais (2019 - 11/08/2022)
 
