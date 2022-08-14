@@ -6,6 +6,8 @@ Fonte dos dados: [CEAPS](https://www12.senado.leg.br/transparencia/dados-abertos
 
 Pesquisa feita como parte das atividades do #7DaysOfCode
 
+Este Readme é apenas um resumo com apresentação de alguns gráficos. As visualizações completas e detalhes das conclusões devem ser consultadas no .ipynb.
+
 # Limpeza e preparação dos dados
 
 Os dados do CEAPS são separados por ano. O período escolhido abrange os anos de 2011 a 2022 (até 11/08).
@@ -26,26 +28,58 @@ Após esses tratamentos, os tipos das colunas puderam ser convertidos facilmente
 
 Valores assim distorcem as médias dos gastos e podem mascarar possíveis valores exorbitantes que podem ser encontrados.
 
-# Análises sobre estatísticas de cada tipo de despesa e os senadores envolvidos
+# Análises sobre os tipos de despesa que totalizaram valores mais altos e os senadores envolvidos (2019 a 11/08/2022)
 
-Até o momento, as análises estão sendo feitas separadas por tipo de despesa, totalizando sete:
+As análises foram feitas sobre os três tipos de despesa com maiores gastos
 
-- Locomoção, hospedagem, alimentação, combustíveis e lubrificantes
-- Passagens aéreas, aquáticas e terrestres nacionais
-- Aluguel de imóveis para escritório político, compreendendo despesas concernentes a eles
-- Aquisição de material de consumo para uso no escritório político, inclusive aquisição ou locação de software, despesas postais, aquisição de publicações, locação de móveis e de equipamentos
-- Divulgação da atividade parlamentar
-- Contratação de consultorias, assessorias, pesquisas, trabalhos técnicos e outros serviços de apoio ao exercício do mandato parlamentar
-- Serviços de Segurança Privada
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/grafico_gastos_por_tipo_de_despesa_destaque.png?raw=true"/>
+</div>
 
-Cada tipo está sendo analisado da seguinte forma:
-- Reembolsos com valores altos (quartis 95% e 99%)
-- Reembolsos com valores baixos (quartis 5% e 1%)
-- Senadores com maiores somatórios em requisições de reembolsos com valores baixos e os fornecedores que mais receberam
-- Senadores com maiores somatórios em requisições de reembolsos com valores altos e os fornecedores que mais receberam
+## Contratação de consultorias, assessorias, pesquisas, trabalhos técnicos e outros serviços de apoio ao exercício do mandato parlamentar
+
+Houveram muitos gastos de valores "baixos", e alguns gastos com valores muito acima da média.
+
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/graficos_contratacao.png?raw=true"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/top10_senadores_contratacao.png?raw=true"/>
+</div>
+
+### Problemas encontrados
+
+As requisições de reembolso com valores baixos (até R$ 58,88, quartil 5%) não apresentaram somas muito exorbitantes. Entretanto, dentre os fornecedores especificados nestas requisições haviam duas companhias aéreas. Em uma delas o detalhamento era relacionado a despesa com frete de documentos, mas na outra não havia nenhuma especificação.
+
+## Passagens aéreas, aquáticas e terrestres nacionais (2019 - 11/08/2022)
+
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/graficos_passagens.png?raw=true"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/top10_senadores_passagens.png?raw=true"/>
+</div>
 
 ### Problemas encontrados
 
 * Haviam passagens aéreas que supostamente foram mais baratas que passagens não aéreas. Como eram poucas (22), optei por remover estas entradas do dataset. Entretanto, considerando que o valor reembolsado aos senadores seja exatamente o que consta no CEAPS, o ideal seria identificar os valores reais destas passagens e descobrir a causa do equívoco.
+
+## Locomoção, hospedagem, alimentação, combustíveis e lubrificantes
+
+Este tipo de despesa é o que sofreu maior variação entre valores mais altos e mais baixos.
+
+Os gastos mais baixos foram feitos por senadores que adquiriram itens baratos de consumo, como água e alimentação. Os três gastos mais altos, de R$ 39.000,00 a R$ 66.730,00, vieram da contratação de táxi aéreo (voos particulares).
+
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/graficos_locomocao.png?raw=true"/>
+</div>
+
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/top10_senadores_locomocao.png?raw=true"/>
+</div>
+
+### Problemas encontrados
 
 * Despesas com valores subnotificados podem não ser reais e, somadas, causarem tanto prejuízo quanto uma quantidade menor de entradas superfaturadas, além de atrapalhar a detecção das mesmas de forma automática.
