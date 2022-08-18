@@ -30,57 +30,30 @@ Valores assim distorcem as médias dos gastos e podem mascarar possíveis valore
 
 # Análises sobre os tipos de despesa que totalizaram valores mais altos e os senadores envolvidos (2019 a 11/08/2022)
 
-As análises foram feitas sobre os três tipos de despesa com maiores gastos
+* As análises foram feitas sobre os três tipos de despesa com maiores gastos.
+* Os nomes foram abreviados no gráfico abaixo para melhor visualização.
 
 <div align="center">
-  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/grafico_gastos_por_tipo_de_despesa_destaque.png?raw=true"/>
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/gastos_por_tipo_de_despesa_destaque.png?raw=true"/>
 </div>
 
-## Contratação de consultorias, assessorias, pesquisas, trabalhos técnicos e outros serviços de apoio ao exercício do mandato parlamentar
-
-Houveram muitos gastos de valores "baixos", e alguns gastos com valores muito acima da média.
+* Todas as análises foram feitas seguindo o seguinte modelo:
 
 <div align="center">
-  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/graficos_contratacao.png?raw=true"/>
-</div>
-
-<div align="center">
-  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/top10_senadores_contratacao.png?raw=true"/>
-</div>
-
-### Problemas encontrados
-
-* As requisições de reembolso com valores baixos (até R$ 58,88, quartil 5%) não apresentaram somas muito exorbitantes. Entretanto, dentre os fornecedores especificados nestas requisições haviam duas companhias aéreas. Em uma delas o detalhamento era relacionado a despesa com frete de documentos, mas na outra não havia nenhuma especificação.
-
-## Passagens aéreas, aquáticas e terrestres nacionais (2019 - 11/08/2022)
-
-<div align="center">
-  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/graficos_passagens.png?raw=true"/>
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/hist_box_contratacao.png?raw=true"/>
 </div>
 
 <div align="center">
-  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/top10_senadores_passagens.png?raw=true"/>
-</div>
-
-### Problemas encontrados
-
-* Haviam passagens aéreas que supostamente foram mais baratas que passagens não aéreas. Como eram poucas (22), optei por remover estas entradas do dataset. Entretanto, considerando que o valor reembolsado aos senadores seja exatamente o que consta no CEAPS, o ideal seria identificar os valores reais destas passagens e descobrir a causa do equívoco.
-
-## Locomoção, hospedagem, alimentação, combustíveis e lubrificantes
-
-Este tipo de despesa é o que sofreu maior variação entre valores mais altos e mais baixos.
-
-Os gastos mais baixos foram feitos por senadores que adquiriram itens baratos de consumo, como água e alimentação. Os três gastos mais altos, de R$ 39.000,00 a R$ 66.730,00, vieram da contratação de táxi aéreo (voos particulares).
-
-<div align="center">
-  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/graficos_locomocao.png?raw=true"/>
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/top10_senadores_sum_contratacao.png?raw=true"/>
 </div>
 
 <div align="center">
-  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/top10_senadores_locomocao.png?raw=true"/>
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/top10_senadores_count_contratacao.png?raw=true"/>
 </div>
 
-### Problemas encontrados
+* Os três tipos de despesas com maiores gastos possuem um comportamernto semelhante: muitos reembolsos de valores baixos e poucos reembolsos de valores muito altos em relação à média.
+
+* Boa parte deste comportamente pode ser explicado pela abrangência de serviços de determinado tipo. Por exemplo: os reembolsos do tipo 'Locomoção, hospedagem, alimentação, combustíveis e lubrificantes' abrange desde garrafas d'água até locação de aeronaves particulares.
 
 * Despesas com valores subnotificados podem não ser reais e, somadas, causarem tanto prejuízo quanto uma quantidade menor de entradas superfaturadas, além de atrapalhar a detecção das mesmas de forma automática.
 
