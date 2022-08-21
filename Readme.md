@@ -57,4 +57,48 @@ Valores assim distorcem as médias dos gastos e podem mascarar possíveis valore
 
 * Despesas com valores subnotificados podem não ser reais e, somadas, causarem tanto prejuízo quanto uma quantidade menor de entradas superfaturadas, além de atrapalhar a detecção das mesmas de forma automática.
 
+# Análises por senador
+
+* Senadores que mais gastaram.
+
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/top15_senadores_sum_2019-2022.png?raw=true"/>
+</div>
+
+# Gastos ao longo do tempo
+
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/temporal_gastos_2019_07-2022.png?raw=true"/>
+</div>
+
+* O mês atual ainda não está com os valores completos, o que faria com que a linha mais escura tivesse uma queda brusca. Por isso, optei por desconsiderá-lo.
+
+* Em 2022, os gastos dos senadores foram mais altos até maio, depois tiveram uma queda brusca. Isso pode estar relacionado tanto à inflação quanto à proximidade das eleições, que ocorrerão em outubro.
+
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/temporal_gastos_2011_07-2022.png?raw=true"/>
+</div>
+
+* Observa-se um pico de mais de 6 milhões de reais em agosto de 2015.
+
+### Investigação do pico de gastos
+
+* Foi feita uma comparação entre o valor do pico e os outros 4 gastos mais altos do período. 
+
+* Com exceção dos dois maiores gastos, o valor reembolsado em 08/2015 seria de R$ 2.127.935,96, um somatório menor do que os meses com maiores gastos de 2011 a 2022.
+
+* Analisando-se outros campos da entradas, é possível que o valor exorbitante tenha sido causado por equívoco no preenchimento nos dados.
+
+# Gastos em anos de eleições
+
+* Considerei os anos 2014, 2018 e 2022.
+
+<div align="center">
+  <img src="https://github.com/Tathy/Pesquisa-reembolsos-CEAPS/blob/main/img/temporal_gastos_anos_eleitorais.png?raw=true"/>
+</div>
+
+* Visualmente, dois dos anos eleitorais do dataset (incluindo o atual, 2022) tiveram gastos maiores até o mês de maio, e gastos mais baixos em setembro.
+
+* Para uma afirmação mais concreta sobre as médias de gastos, são necessários testes estatísticos que considerem as taxas de inflação a cada mês e ano.
+
 🌱
